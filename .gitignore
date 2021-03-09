@@ -1,6 +1,6 @@
 # MAC
 .DS_Store
-home.xcodeproj/
+**/*.xcodeproj/
 
 # Prerequisites
 *.d
