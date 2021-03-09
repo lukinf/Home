@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8006FB7725F812D100766951 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB7625F812D100766951 /* main.cpp */; };
+		8006FB7A25F813FB00766951 /* board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB7925F813FB00766951 /* board.cpp */; };
+		8006FB7E25F8140200766951 /* switch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB7C25F8140200766951 /* switch.cpp */; };
+		8006FB7F25F8140200766951 /* prolific.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB7D25F8140200766951 /* prolific.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,14 @@
 /* Begin PBXFileReference section */
 		8006FB6925F810AB00766951 /* home */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = home; sourceTree = BUILT_PRODUCTS_DIR; };
 		8006FB7625F812D100766951 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8006FB7925F813FB00766951 /* board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = board.cpp; sourceTree = "<group>"; };
+		8006FB7C25F8140200766951 /* switch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = switch.cpp; sourceTree = "<group>"; };
+		8006FB7D25F8140200766951 /* prolific.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = prolific.cpp; sourceTree = "<group>"; };
+		8006FB8225F8142600766951 /* switch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = switch.hpp; sourceTree = "<group>"; };
+		8006FB8325F8142600766951 /* enums.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = enums.hpp; sourceTree = "<group>"; };
+		8006FB8425F8142600766951 /* top.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = top.hpp; sourceTree = "<group>"; };
+		8006FB8525F8142600766951 /* prolific.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prolific.hpp; sourceTree = "<group>"; };
+		8006FB8625F8142600766951 /* board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +52,7 @@
 		8006FB6025F810AB00766951 = {
 			isa = PBXGroup;
 			children = (
+				8006FB8125F8140F00766951 /* include */,
 				8006FB7525F811CF00766951 /* src */,
 				8006FB6A25F810AB00766951 /* Products */,
 			);
@@ -57,9 +69,24 @@
 		8006FB7525F811CF00766951 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				8006FB7D25F8140200766951 /* prolific.cpp */,
+				8006FB7C25F8140200766951 /* switch.cpp */,
+				8006FB7925F813FB00766951 /* board.cpp */,
 				8006FB7625F812D100766951 /* main.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		8006FB8125F8140F00766951 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8006FB8625F8142600766951 /* board.hpp */,
+				8006FB8325F8142600766951 /* enums.hpp */,
+				8006FB8525F8142600766951 /* prolific.hpp */,
+				8006FB8225F8142600766951 /* switch.hpp */,
+				8006FB8425F8142600766951 /* top.hpp */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8006FB7E25F8140200766951 /* switch.cpp in Sources */,
+				8006FB7F25F8140200766951 /* prolific.cpp in Sources */,
+				8006FB7A25F813FB00766951 /* board.cpp in Sources */,
 				8006FB7725F812D100766951 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
