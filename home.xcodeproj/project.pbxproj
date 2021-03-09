@@ -36,6 +36,7 @@
 		8006FB6025F810AB00766951 = {
 			isa = PBXGroup;
 			children = (
+				8006FB7525F811CF00766951 /* src */,
 				8006FB6A25F810AB00766951 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +47,13 @@
 				8006FB6925F810AB00766951 /* home */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8006FB7525F811CF00766951 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
