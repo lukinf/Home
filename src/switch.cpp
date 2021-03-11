@@ -5,8 +5,8 @@
 //  Created by Lukas Fridl on 09.03.2021.
 //
 
-#include "top.hpp"
 #include "switch.hpp"
+#include "top.hpp"
 
 Switch::Switch(){
     SetStatus(ON);

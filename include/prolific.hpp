@@ -5,18 +5,22 @@
 //  Created by Lukas Fridl on 09.03.2021.
 //
 
-#include "board.hpp"
-
 #ifndef prolific_h
 #define prolific_h
+
+#include "board.hpp"
+#include "top.hpp"
 
 class Prolific : public Board
 {
 public:
     Prolific();
     void GetRelays();
+    void OpenAndCofigureSerialPort();
     ~Prolific();
-    typedef Board super;
+    typedef const Board super;
+private:
+    const int NumberOfRelays = 8;
 };
 
 #endif /* prolific_h */

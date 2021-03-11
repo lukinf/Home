@@ -13,4 +13,13 @@ enum switch_status {
     OFF = 2
 };
 
+enum board_type {
+    PROLIFIC = 1
+};
+
+enum logger_type {
+    CONSOLE = 1,
+    LOG_FILE = 2
+};
+
 #endif /* enums_h */

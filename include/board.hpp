@@ -8,13 +8,18 @@
 #ifndef board_h
 #define board_h
 
+#include "top.hpp"
+
 class Board
 {
 public:
     Board();
     virtual void GetRelays();
     void GetLogger();
+    void SetLogger(int i);
     ~Board();
+protected:
+    int logger;
 };
 
 #endif /* board_h */

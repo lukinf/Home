@@ -5,19 +5,23 @@
 //  Created by Lukas Fridl on 09.03.2021.
 //
 
-#include "top.hpp"
-
 #ifndef switch_h
 #define switch_h
+
+#include "switch.hpp"
+#include "top.hpp"
 
 class Switch
 {
 public:
     Switch();
+    int GetId();
+    void SetId(int status);
     virtual switch_status GetStatus();
     virtual void SetStatus(switch_status status);
     ~Switch();
-private:
+protected:
+    int id;
     switch_status Status;
 };
 
