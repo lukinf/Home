@@ -14,6 +14,7 @@
 		8006FB8A25F8A89700766951 /* relay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB8825F8A89700766951 /* relay.cpp */; };
 		8006FB8F25F8BEA600766951 /* board_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB8D25F8BEA600766951 /* board_factory.cpp */; };
 		8006FB9425F8F23500766951 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB9225F8F23500766951 /* logger.cpp */; };
+		8006FB9925FA9E6F00766951 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB9725FA9E6F00766951 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		8006FB8E25F8BEA600766951 /* board_factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_factory.hpp; sourceTree = "<group>"; };
 		8006FB9225F8F23500766951 /* logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
 		8006FB9325F8F23500766951 /* logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = logger.hpp; sourceTree = "<group>"; };
+		8006FB9725FA9E6F00766951 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		8006FB6025F810AB00766951 = {
 			isa = PBXGroup;
 			children = (
+				8006FB9725FA9E6F00766951 /* readme.md */,
 				8006FB8125F8140F00766951 /* include */,
 				8006FB7525F811CF00766951 /* src */,
 				8006FB6A25F810AB00766951 /* Products */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8006FB7E25F8140200766951 /* switch.cpp in Sources */,
+				8006FB9925FA9E6F00766951 /* readme.md in Sources */,
 				8006FB8F25F8BEA600766951 /* board_factory.cpp in Sources */,
 				8006FB7F25F8140200766951 /* prolific.cpp in Sources */,
 				8006FB7A25F813FB00766951 /* board.cpp in Sources */,
