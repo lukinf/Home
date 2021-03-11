@@ -8,19 +8,21 @@
 #include "board.hpp"
 #include "top.hpp"
 
+using namespace std;
+
 Board::Board(){
-    std::cout << "Board constructor" << std::endl;
+    cout << "Board constructor" << endl;
 }
 
 void Board::SetLogger(int i){
-    std::cout << "Board set logger" << std::endl;
+    cout << "Board set logger" << endl;
     logger = i;
 }
 
 void Board::GetRelays(){
-    std::cout << "Board GetRelays" << std::endl;
+    cout << "Board GetRelays" << endl;
 }
 
 Board::~Board(){
-    std::cout << "Board destructor" << std::endl;
+    cout << "Board destructor" << endl;
 }

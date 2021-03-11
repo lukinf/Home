@@ -13,13 +13,15 @@
 #include "board.hpp"
 #include "board_factory.hpp"
 
+using namespace std;
+
 int main(int argc, const char * argv[]) {
 
     Board * board = BoardFactory::GetBoard(PROLIFIC);
     board->GetRelays();
     
-    std::bitset <8> data("11111111");
-    std::cout << "HEX Data = " << std::hex << data.to_ulong() << std::endl;
+    bitset <8> data("11111111");
+    cout << "HEX Data = " << std::hex << data.to_ulong() << std::endl;
     
     /*
     const unsigned command[] = {0x50};

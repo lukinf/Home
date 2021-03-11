@@ -18,7 +18,7 @@ public:
     switch_status GetStatus();
     void SetStatus(switch_status status);
     ~Relay();
-    typedef Switch super;
+    typedef Switch Super;
 };
 
 #endif /* relay_hpp */

@@ -8,14 +8,16 @@
 #include "prolific.hpp"
 #include "top.hpp"
 
+using namespace std;
+
 Prolific::Prolific(){
-    std::cout << "Prolific constructor" << std::endl;
+    cout << "Prolific constructor" << endl;
     OpenAndCofigureSerialPort();
 }
 
 void Prolific::GetRelays(){
-    super::GetRelays();
-    std::cout << "Prolific GetRelays" << std::endl ;
+    Super::GetRelays();
+    cout << "Prolific GetRelays" << endl ;
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
@@ -28,11 +30,11 @@ void Prolific::OpenAndCofigureSerialPort(){
     cfsetospeed(&options, B9600);
     
     if (tcsetattr(serial_port, TCSANOW, &options) < 0) {
-        std::cout << "Errorek :(" << std::endl;
+        cout << "Errorek :(" << endl;
         close(serial_port);
     }
 }
 
 Prolific::~Prolific(){
-    std::cout << "Prolific destructor" << std::endl;
+    cout << "Prolific destructor" << endl;
 }

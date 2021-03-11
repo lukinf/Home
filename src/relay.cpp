@@ -13,11 +13,11 @@ Relay::Relay(){
 }
 
 switch_status Relay::GetStatus(){
-    return super::Status;
+    return Super::Status;
 };
 
 void Relay::SetStatus(switch_status status){
-    super::SetStatus(status);
+    Super::SetStatus(status);
 };
 
 Relay::~Relay(){

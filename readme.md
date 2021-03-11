@@ -1,1 +1,1 @@
-Relay board (8 relays) - Prolific serial 
+Relay board (8 relays) - Serial port

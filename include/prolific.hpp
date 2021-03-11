@@ -18,9 +18,9 @@ public:
     void GetRelays();
     void OpenAndCofigureSerialPort();
     ~Prolific();
-    typedef const Board super;
+    typedef const Board Super;
 private:
-    const int NumberOfRelays = 8;
+    const int NUMBER_OF_RELAYS = 8;
 };
 
 #endif /* prolific_h */
