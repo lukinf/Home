@@ -21,6 +21,7 @@ public:
     typedef const Board Super;
 private:
     const int NUMBER_OF_RELAYS = 8;
+    int SerialPort;
 };
 
 #endif /* prolific_h */

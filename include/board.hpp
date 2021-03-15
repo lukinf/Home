@@ -17,8 +17,9 @@ public:
     virtual void GetRelays();
     void GetLogger();
     void SetLogger(int i);
-    ~Board();
+    virtual ~Board();
 protected:
+    bool Connected = false;
     int logger;
 };
 
