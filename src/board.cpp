@@ -5,8 +5,10 @@
 //  Created by Lukas Fridl on 09.03.2021.
 //
 
+#include <vector>
 #include "board.hpp"
 #include "top.hpp"
+#include "switch.hpp"
 
 using namespace std;
 
@@ -19,9 +21,9 @@ void Board::SetLogger(int i){
     logger = i;
 }
 
-void Board::GetRelays(){
-    cout << "Board GetRelays" << endl;
-}
+vector<Switch> Board::GetSwitches(){
+    return * Switches;
+};
 
 Board::~Board(){
     cout << "Board destructor" << endl;

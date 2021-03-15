@@ -6,19 +6,22 @@
 //
 
 #include <unistd.h>
+#include <vector>
 #include "prolific.hpp"
 #include "top.hpp"
+#include "switch.hpp"
+#include "relay.hpp"
 
 using namespace std;
 
 Prolific::Prolific(){
     cout << "Prolific constructor" << endl;
+    InitRelays();
     OpenAndCofigureSerialPort();
 }
 
-void Prolific::GetRelays(){
-    Super::GetRelays();
-    cout << "Prolific GetRelays" << endl ;
+vector<Switch> Prolific::GetSwitches(){
+    return * Switches;
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
@@ -41,20 +44,28 @@ void Prolific::OpenAndCofigureSerialPort(){
     char command = NULL;
     char * commandPtr = &command;
     
-    command = 0x50;
+    *commandPtr = 0x50;
     write(SerialPort, commandPtr, 1);
     usleep(500000);
     
-    command = 0x51;
+    *commandPtr = 0x51;
     write(SerialPort, commandPtr, 1);
     usleep(500000);
     
     bitset <8> data("01111111");
-    command = data.to_ulong();
+    *commandPtr = data.to_ulong();
     usleep(500000);
     
     write(SerialPort, commandPtr, 1);
     usleep(500000);
+}
+
+void Prolific::InitRelays(){
+    Switches = new vector<Switch>();
+    for(int i = 0;i < NUMBER_OF_RELAYS;i++){
+        Switch * relay = new Relay();
+        Switches->push_back(*relay);
+    }
 }
 
 Prolific::~Prolific(){

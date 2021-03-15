@@ -18,7 +18,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
 
     Board * board = BoardFactory::GetBoard(PROLIFIC);
-    board->GetRelays();
+    board->GetSwitches();
     
     delete board;
     return 0;
