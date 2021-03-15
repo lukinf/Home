@@ -21,7 +21,7 @@ void Board::SetLogger(int i){
     logger = i;
 }
 
-vector<Switch> Board::GetSwitches(){
+vector<Switch*> Board::GetSwitches(){
     return * Switches;
 };
 

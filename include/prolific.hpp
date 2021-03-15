@@ -19,7 +19,7 @@ class Prolific : public Board
 {
 public:
     Prolific();
-    vector<Switch> GetSwitches();
+    vector<Switch*> GetSwitches();
     void OpenAndCofigureSerialPort();
     ~Prolific();
     typedef const Board Super;

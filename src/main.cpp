@@ -19,7 +19,11 @@ int main(int argc, const char * argv[]) {
     
     Board * board = BoardFactory::GetBoard(PROLIFIC);
     board->SetNumberOfSwitches(8);
-    vector<Switch> switches = board->GetSwitches();
+    vector<Switch*> switches = board->GetSwitches();
+    
+    for(Switch * relay : switches){
+        cout << relay->GetStatus() << endl;
+    };
     
     delete board;
     return 0;
