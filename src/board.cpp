@@ -25,6 +25,14 @@ vector<Switch> Board::GetSwitches(){
     return * Switches;
 };
 
+int Board::GetNumberOfSwitches(){
+    return NumberOfSwitches;
+}
+
+void Board::SetNumberOfSwitches(int NumberOfSwitches){
+    NumberOfSwitches = NumberOfSwitches;
+}
+
 Board::~Board(){
     cout << "Board destructor" << endl;
 }

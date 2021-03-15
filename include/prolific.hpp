@@ -27,7 +27,6 @@ public:
     typedef const Board Super;
 private:
     void InitRelays();
-    int NumberOfRelays;
     int SerialPort;
 };
 

@@ -19,12 +19,15 @@ public:
     Board();
     void GetLogger();
     void SetLogger(int i);
+    int GetNumberOfSwitches();
+    void SetNumberOfSwitches(int NumberOfSwitches);
     virtual vector<Switch> GetSwitches();
     virtual ~Board();
 protected:
     bool Connected = false;
     int logger;
     vector<Switch> * Switches;
+    int NumberOfSwitches;
 };
 
 #endif /* board_h */
