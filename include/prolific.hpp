@@ -20,12 +20,14 @@ class Prolific : public Board
 public:
     Prolific();
     vector<Switch> GetSwitches();
+    int GetNumberOfRelays();
+    void SetNumberOfRelays(int NumberOfRelays);
     void OpenAndCofigureSerialPort();
     ~Prolific();
     typedef const Board Super;
 private:
     void InitRelays();
-    const int NUMBER_OF_RELAYS = 8;
+    int NumberOfRelays;
     int SerialPort;
 };
 

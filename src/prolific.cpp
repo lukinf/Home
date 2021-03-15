@@ -62,10 +62,18 @@ void Prolific::OpenAndCofigureSerialPort(){
 
 void Prolific::InitRelays(){
     Switches = new vector<Switch>();
-    for(int i = 0;i < NUMBER_OF_RELAYS;i++){
+    for(int i = 0;i < NumberOfRelays;i++){
         Switch * relay = new Relay();
         Switches->push_back(*relay);
     }
+}
+
+int Prolific::GetNumberOfRelays(){
+    return NumberOfRelays;
+}
+
+void Prolific::SetNumberOfRelays(int NumberOfRelays){
+    NumberOfRelays = NumberOfRelays;
 }
 
 Prolific::~Prolific(){
