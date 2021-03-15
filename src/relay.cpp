@@ -9,7 +9,6 @@
 #include "top.hpp"
 
 Relay::Relay(){
-    SetStatus(ON);
 }
 
 switch_status Relay::GetStatus(){

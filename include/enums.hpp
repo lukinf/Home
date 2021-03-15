@@ -9,8 +9,8 @@
 #define enums_h
 
 enum switch_status {
-    ON = 1,
-    OFF = 2
+    ON = 0,
+    OFF = 1
 };
 
 enum board_type {

@@ -30,7 +30,7 @@ int Board::GetNumberOfSwitches(){
 }
 
 void Board::SetNumberOfSwitches(int NumberOfSwitches){
-    NumberOfSwitches = NumberOfSwitches;
+    this->NumberOfSwitches = NumberOfSwitches;
 }
 
 Board::~Board(){

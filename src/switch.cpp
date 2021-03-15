@@ -9,7 +9,7 @@
 #include "top.hpp"
 
 Switch::Switch(){
-    SetStatus(ON);
+    SetStatus(OFF);
 }
 
 switch_status Switch::GetStatus(){

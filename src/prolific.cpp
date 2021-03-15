@@ -16,11 +16,11 @@ using namespace std;
 
 Prolific::Prolific(){
     cout << "Prolific constructor" << endl;
-    InitRelays();
     OpenAndCofigureSerialPort();
 }
 
 vector<Switch> Prolific::GetSwitches(){
+    InitRelays();
     return * Switches;
 }
 
@@ -62,7 +62,7 @@ void Prolific::OpenAndCofigureSerialPort(){
 
 void Prolific::InitRelays(){
     Switches = new vector<Switch>();
-    for(int i = 0;i < NumberOfSwitches;i++){
+    for(int i = 0;i < Super::NumberOfSwitches;i++){
         Switch * relay = new Relay();
         Switches->push_back(*relay);
     }
