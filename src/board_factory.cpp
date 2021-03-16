@@ -6,19 +6,15 @@
 //
 
 #include "board_factory.hpp"
-#include "board.hpp"
-#include "prolific.hpp"
-#include "top.hpp"
 
 BoardFactory::BoardFactory(){
-    // Constructor
 }
 
-Board * BoardFactory::GetBoard(board_type type){
-    Board * board;
+unique_ptr<Board> BoardFactory::GetBoard(board_type type){
     switch (type) {
         case PROLIFIC:
-            board = new Prolific();
-    }
-    return board;
+           unique_ptr<Board> board(new(Prolific));
+        return board;
+    };
+    throw (BoardEx("Wrong type"));
 }

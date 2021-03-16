@@ -5,17 +5,9 @@
 //  Created by Lukas Fridl on 09.03.2021.
 //
 
-#include <unistd.h>
-#include <vector>
 #include "prolific.hpp"
-#include "top.hpp"
-#include "switch.hpp"
-#include "relay.hpp"
-
-using namespace std;
 
 Prolific::Prolific(){
-    cout << "Prolific constructor" << endl;
     OpenAndCofigureSerialPort();
 }
 
@@ -27,6 +19,7 @@ vector<Switch*> Prolific::GetSwitches(){
 void Prolific::OpenAndCofigureSerialPort(){
     SerialPort = open("/dev/cu.usbserial-410", (O_RDWR | O_NOCTTY | O_NDELAY));
     
+    // Test logic and data
     struct termios options;
     tcgetattr(SerialPort, &options);
     
@@ -69,6 +62,5 @@ void Prolific::InitRelays(){
 }
 
 Prolific::~Prolific(){
-    cout << "Prolific destructor" << endl;
     close(SerialPort);
 }

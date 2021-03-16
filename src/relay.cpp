@@ -6,7 +6,6 @@
 //
 
 #include "relay.hpp"
-#include "top.hpp"
 
 Relay::Relay(){
 }

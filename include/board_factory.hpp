@@ -10,13 +10,15 @@
 
 #include "top.hpp"
 #include "board.hpp"
+#include "board_ex.hpp"
+#include "prolific.hpp"
 
 class BoardFactory
 {
-public:
+private:
     BoardFactory();
-    static Board * GetBoard(board_type type);
-    static Board GetBoardStack(const board_type type);
+public:
+    static unique_ptr<Board> GetBoard(board_type type);
     ~BoardFactory();
 };
 

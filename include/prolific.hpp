@@ -10,8 +10,8 @@
 
 #include <vector>
 #include "board.hpp"
-#include "top.hpp"
 #include "switch.hpp"
+#include "relay.hpp"
 
 using namespace std;
 

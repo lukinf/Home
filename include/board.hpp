@@ -8,8 +8,8 @@
 #ifndef board_h
 #define board_h
 
-#include "top.hpp"
 #include "switch.hpp"
+#include <vector>
 
 using namespace std;
 
@@ -26,8 +26,8 @@ public:
 protected:
     bool Connected = false;
     int logger;
-    vector<Switch*> * Switches;
     int NumberOfSwitches;
+    vector<Switch*> * Switches;
 };
 
 #endif /* board_h */
