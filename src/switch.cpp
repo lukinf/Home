@@ -6,10 +6,17 @@
 //
 
 #include "switch.hpp"
-#include "top.hpp"
 
 Switch::Switch(){
     SetStatus(OFF);
+}
+
+int Switch::GetId(){
+    return Id;
+}
+
+void Switch::SetId(int id){
+    Id = id;
 }
 
 switch_status Switch::GetStatus(){

@@ -10,6 +10,7 @@
 
 #include "switch.hpp"
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -22,11 +23,14 @@ public:
     int GetNumberOfSwitches();
     void SetNumberOfSwitches(int NumberOfSwitches);
     virtual vector<Switch*> GetSwitches();
+    string GetBits();
+    virtual void SetBits(string bits);
     virtual ~Board();
 protected:
     bool Connected = false;
     int logger;
     int NumberOfSwitches;
+    string Bits;
     vector<Switch*> * Switches;
 };
 

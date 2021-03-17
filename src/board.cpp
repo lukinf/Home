@@ -24,6 +24,17 @@ int Board::GetNumberOfSwitches(){
 
 void Board::SetNumberOfSwitches(int NumberOfSwitches){
     this->NumberOfSwitches = NumberOfSwitches;
+    for (int i = 0; i < NumberOfSwitches;i++){
+        Bits.append("1");
+    }
+}
+
+string Board::GetBits(){
+    return Bits;
+}
+
+void Board::SetBits(string bits){
+    Bits = bits;
 }
 
 Board::~Board(){

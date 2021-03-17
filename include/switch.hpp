@@ -9,19 +9,19 @@
 #define switch_h
 
 #include "switch.hpp"
-#include "top.hpp"
+#include "enums.hpp"
 
 class Switch
 {
 public:
     Switch();
     int GetId();
-    void SetId(int status);
+    void SetId(int id);
     virtual switch_status GetStatus();
     virtual void SetStatus(switch_status status);
     ~Switch();
 protected:
-    int id;
+    int Id;
     switch_status Status;
 };
 

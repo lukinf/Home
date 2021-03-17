@@ -14,7 +14,8 @@ enum switch_status {
 };
 
 enum board_type {
-    PROLIFIC = 1
+    PROLIFIC = 1,
+    GENERIC = 2
 };
 
 enum logger_type {

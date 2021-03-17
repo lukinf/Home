@@ -6,6 +6,12 @@
 //
 
 #include "prolific.hpp"
+#include <iostream>
+#include <fcntl.h>
+#include <errno.h>
+#include <termios.h>
+#include <unistd.h>
+#include "enums.hpp"
 
 Prolific::Prolific(){
     OpenAndCofigureSerialPort();
@@ -17,9 +23,8 @@ vector<Switch*> Prolific::GetSwitches(){
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
-    SerialPort = open("/dev/cu.usbserial-410", (O_RDWR | O_NOCTTY | O_NDELAY));
+    SerialPort = open("/dev/cu.usbserial-110", (O_RDWR | O_NOCTTY | O_NDELAY));
     
-    // Test logic and data
     struct termios options;
     tcgetattr(SerialPort, &options);
     
@@ -33,32 +38,24 @@ void Prolific::OpenAndCofigureSerialPort(){
     } else {
         Super::Connected = true;
     }
-    
-    char command = NULL;
-    char * commandPtr = &command;
-    
-    *commandPtr = 0x50;
-    write(SerialPort, commandPtr, 1);
-    usleep(500000);
-    
-    *commandPtr = 0x51;
-    write(SerialPort, commandPtr, 1);
-    usleep(500000);
-    
-    bitset <8> data("01111111");
-    *commandPtr = data.to_ulong();
-    usleep(500000);
-    
-    write(SerialPort, commandPtr, 1);
-    usleep(500000);
 }
 
 void Prolific::InitRelays(){
     Switches = new vector<Switch*>();
     for(int i = 0;i < Super::NumberOfSwitches;i++){
-        Switch * relay = new Relay();
+        Switch * relay = new Relay(this);
+        relay->SetId(i);
         Switches->push_back(relay);
     }
+}
+
+void Prolific::SetBits(string bits){
+    this->Bits = bits;
+    bitset <8> data(this->Bits);
+    auto hex = data.to_ulong();
+    unsigned long * commandPtr = &hex;
+    write(SerialPort, commandPtr, 1);
+    usleep(500000);
 }
 
 Prolific::~Prolific(){

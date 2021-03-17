@@ -21,6 +21,7 @@ public:
     Prolific();
     vector<Switch*> GetSwitches();
     void OpenAndCofigureSerialPort();
+    void SetBits(string bits);
     ~Prolific();
     typedef const Board Super;
 private:

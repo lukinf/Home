@@ -8,7 +8,6 @@
 #ifndef board_factory_hpp
 #define board_factory_hpp
 
-#include "top.hpp"
 #include "board.hpp"
 #include "board_ex.hpp"
 #include "prolific.hpp"

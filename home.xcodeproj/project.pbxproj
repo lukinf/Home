@@ -38,7 +38,6 @@
 		8006FB7D25F8140200766951 /* prolific.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = prolific.cpp; sourceTree = "<group>"; };
 		8006FB8225F8142600766951 /* switch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = switch.hpp; sourceTree = "<group>"; };
 		8006FB8325F8142600766951 /* enums.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = enums.hpp; sourceTree = "<group>"; };
-		8006FB8425F8142600766951 /* top.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = top.hpp; sourceTree = "<group>"; };
 		8006FB8525F8142600766951 /* prolific.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prolific.hpp; sourceTree = "<group>"; };
 		8006FB8625F8142600766951 /* board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board.hpp; sourceTree = "<group>"; };
 		8006FB8825F8A89700766951 /* relay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = relay.cpp; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 				8006FB8325F8142600766951 /* enums.hpp */,
 				8006FB8525F8142600766951 /* prolific.hpp */,
 				8006FB8225F8142600766951 /* switch.hpp */,
-				8006FB8425F8142600766951 /* top.hpp */,
 				8006FB8925F8A89700766951 /* relay.hpp */,
 				8006FB8E25F8BEA600766951 /* board_factory.hpp */,
 				8006FB9325F8F23500766951 /* logger.hpp */,

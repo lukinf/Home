@@ -7,7 +7,8 @@
 
 #include "relay.hpp"
 
-Relay::Relay(){
+Relay::Relay(Board * board){
+    this->board = board;
 }
 
 switch_status Relay::GetStatus(){
@@ -15,6 +16,18 @@ switch_status Relay::GetStatus(){
 };
 
 void Relay::SetStatus(switch_status status){
+    string bits;
+    for(int i = 0; i < board->GetNumberOfSwitches(); i++){
+        if(status == ON && Id == i){
+            bits = board->GetBits();
+            bits.replace(i, 1, "0");
+            board->SetBits(bits);
+        } else if (status == OFF && Id == i){
+            bits = board->GetBits();
+            bits.replace(i, 1, "1");
+            board->SetBits(bits);
+        }
+    }
     Super::SetStatus(status);
 };
 
