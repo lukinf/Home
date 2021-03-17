@@ -55,7 +55,7 @@ void Prolific::SetBits(string bits){
     auto hex = data.to_ulong();
     unsigned long * commandPtr = &hex;
     write(SerialPort, commandPtr, 1);
-    usleep(500000);
+    usleep(300000);
 }
 
 Prolific::~Prolific(){

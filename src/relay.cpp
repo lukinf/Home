@@ -22,10 +22,12 @@ void Relay::SetStatus(switch_status status){
             bits = board->GetBits();
             bits.replace(i, 1, "0");
             board->SetBits(bits);
+            break;
         } else if (status == OFF && Id == i){
             bits = board->GetBits();
             bits.replace(i, 1, "1");
             board->SetBits(bits);
+            break;
         }
     }
     Super::SetStatus(status);
