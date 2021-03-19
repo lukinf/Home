@@ -6,13 +6,12 @@
 //
 
 #include "prolific.hpp"
+#include "relay.hpp"
 #include <iostream>
 #include <fcntl.h>
 #include <errno.h>
 #include <termios.h>
 #include <unistd.h>
-#include "enums.hpp"
-#include "relay.hpp"
 
 Prolific::Prolific(const int& NumberOfSwitches): Board(NumberOfSwitches){
     InitSwitches();

@@ -26,6 +26,7 @@ public:
 private:
     void InitSwitches();
     int SerialPort;
+    string bits = "11111111";
 };
 
 #endif /* prolific_h */
