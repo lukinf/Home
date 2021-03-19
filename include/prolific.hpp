@@ -18,12 +18,11 @@ using namespace std;
 class Prolific : public Board
 {
 public:
-    Prolific();
-    vector<Switch*> GetSwitches();
+    Prolific(const int & NumberOfSwitches);
+    string GetBits();
+    void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
-    void SetBits(string bits);
     ~Prolific();
-    typedef const Board Super;
 private:
     void InitRelays();
     int SerialPort;

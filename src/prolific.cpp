@@ -13,13 +13,18 @@
 #include <unistd.h>
 #include "enums.hpp"
 
-Prolific::Prolific(){
-    OpenAndCofigureSerialPort();
+Prolific::Prolific(const int& NumberOfSwitches): Board(NumberOfSwitches){
+    for (int i = 0;i < number_of_switches;i++){
+        bits.append("1");
+    }
 }
 
-vector<Switch*> Prolific::GetSwitches(){
-    InitRelays();
-    return * Switches;
+string Prolific::GetBits(){
+    return bits;
+}
+
+void Prolific::SetBits(const string& Bits){
+    bits = Bits;
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
@@ -33,30 +38,32 @@ void Prolific::OpenAndCofigureSerialPort(){
     
     if (tcsetattr(SerialPort, TCSANOW, &options) < 0) {
         cout << "Err" << endl;
-        Super::Connected = false;
         close(SerialPort);
     } else {
-        Super::Connected = true;
+        
     }
 }
 
 void Prolific::InitRelays(){
-    Switches = new vector<Switch*>();
-    for(int i = 0;i < Super::NumberOfSwitches;i++){
+    /*
+    switches = new vector<Switch*>();
+    for(int i = 0;i < number_of_switches;i++){
         Switch * relay = new Relay(this);
         relay->SetId(i);
-        Switches->push_back(relay);
+        switches->push_back(relay);
     }
+     */
 }
 
-void Prolific::SetBits(string bits){
-    this->Bits = bits;
-    bitset <8> data(this->Bits);
+//void Prolific::SetBits(string bits){
+    /*
+    this->bits = bits;
+    bitset <8> data(this->bits);
     auto hex = data.to_ulong();
-    unsigned long * commandPtr = &hex;
-    write(SerialPort, commandPtr, 1);
+    write(SerialPort, &hex, 1);
     usleep(300000);
-}
+     */
+//}
 
 Prolific::~Prolific(){
     close(SerialPort);

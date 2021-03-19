@@ -6,36 +6,37 @@
 //
 
 #include "board.hpp"
+#include <iostream>
 
-Board::Board(){
+using namespace std;
+
+Board::Board(const int& NumberOfSwitches) {
+    cout << "Board created" << endl;
+    number_of_switches = NumberOfSwitches;
+    InitSwitches();
 }
 
-void Board::SetLogger(int i){
-    logger = i;
-}
-
-vector<Switch*> Board::GetSwitches(){
-    return * Switches;
-};
-
-int Board::GetNumberOfSwitches(){
-    return NumberOfSwitches;
-}
-
-void Board::SetNumberOfSwitches(int NumberOfSwitches){
-    this->NumberOfSwitches = NumberOfSwitches;
-    for (int i = 0; i < NumberOfSwitches;i++){
-        Bits.append("1");
+void Board::InitSwitches(){
+    for(int i = 0; i < number_of_switches;i++){
+        switches.push_back(new Switch(i));
     }
 }
 
-string Board::GetBits(){
-    return Bits;
+vector<Switch*> Board::GetSwitches(){
+    return switches;
+};
+
+int Board::GetNumberOfSwitches(){
+    return number_of_switches;
 }
 
-void Board::SetBits(string bits){
-    Bits = bits;
+void Board::SetNumberOfSwitches(const int& NumberOfSwitches){
+    number_of_switches = NumberOfSwitches;
 }
 
 Board::~Board(){
+    for(Switch * board_switch : switches){
+        delete board_switch;
+    };
+    cout << "Board deleted" << endl;
 }

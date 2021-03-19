@@ -13,14 +13,11 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     auto board (BoardFactory::GetBoard(PROLIFIC));
-    board->SetNumberOfSwitches(8);
     auto switches = board->GetSwitches();
+    cout << board->GetNumberOfSwitches() << endl;
     
     for(Switch * relay : switches){
         relay->SetStatus(ON);
-        cout << relay->GetStatus() << endl;
-        relay->SetStatus(OFF);
-        cout << relay->GetStatus() << endl;
     };
     
     return 0;

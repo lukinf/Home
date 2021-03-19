@@ -17,21 +17,16 @@ using namespace std;
 class Board
 {
 public:
-    Board();
-    void GetLogger();
-    void SetLogger(int i);
+    Board(const int& NumberOfSwitches);
     int GetNumberOfSwitches();
-    void SetNumberOfSwitches(int NumberOfSwitches);
-    virtual vector<Switch*> GetSwitches();
-    string GetBits();
-    virtual void SetBits(string bits);
-    virtual ~Board();
+    void SetNumberOfSwitches(const int& NumberOfSwitches);
+    vector<Switch*> GetSwitches();
+    ~Board();
 protected:
-    bool Connected = false;
-    int logger;
-    int NumberOfSwitches;
-    string Bits;
-    vector<Switch*> * Switches;
+    int number_of_switches;
+    string bits;
+    vector<Switch*> switches;
+    virtual void InitSwitches();
 };
 
 #endif /* board_h */

@@ -8,21 +8,23 @@
 #ifndef switch_h
 #define switch_h
 
+#include <iostream>
 #include "switch.hpp"
 #include "enums.hpp"
+
+using namespace std;
 
 class Switch
 {
 public:
-    Switch();
+    Switch(const int& Id);
     int GetId();
-    void SetId(int id);
-    virtual switch_status GetStatus();
-    virtual void SetStatus(switch_status status);
+    switch_status GetStatus();
+    void SetStatus(const switch_status& Status);
     ~Switch();
 protected:
-    int Id;
-    switch_status Status;
+    int id;
+    switch_status status;
 };
 
 #endif /* relay_h */

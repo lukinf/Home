@@ -15,13 +15,9 @@
 class Relay : public Switch
 {
 public:
-    Relay(Board * board);
-    switch_status GetStatus();
-    void SetStatus(switch_status status);
+    Relay(const int& Id);
     ~Relay();
-    typedef Switch Super;
-private:
-    Board * board;
 };
 
 #endif /* relay_hpp */
+

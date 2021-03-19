@@ -7,27 +7,25 @@
 
 #include "switch.hpp"
 
-Switch::Switch(){
-    SetStatus(OFF);
+Switch::Switch(const int& Id){
+    id = Id;
+    status = OFF;
+    cout << "Created switch Id:" << id << endl;
 }
 
 int Switch::GetId(){
-    return Id;
-}
-
-void Switch::SetId(int id){
-    Id = id;
+    return id;
 }
 
 switch_status Switch::GetStatus(){
-    return Status;
+    return status;
 };
 
-void Switch::SetStatus(switch_status status){
-    Status = status;
+void Switch::SetStatus(const switch_status& Status){
+    status = Status;
 };
 
 Switch::~Switch(){
-    SetStatus(OFF);
+    cout << "Deleted switch Id:" << id << endl;
 }
 
