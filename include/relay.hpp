@@ -9,14 +9,17 @@
 #define relay_hpp
 
 #include "switch.hpp"
-#include "board.hpp"
+#include "prolific.hpp"
 #include <string>
 
 class Relay : public Switch
 {
 public:
-    Relay(const int& Id);
+    Relay(const int& Id, Prolific* Board);
+    void SetStatus(const switch_status& Status);
     ~Relay();
+private:
+    Prolific* board;
 };
 
 #endif /* relay_hpp */

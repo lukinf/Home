@@ -12,9 +12,11 @@
 #include <termios.h>
 #include <unistd.h>
 #include "enums.hpp"
+#include "relay.hpp"
 
 Prolific::Prolific(const int& NumberOfSwitches): Board(NumberOfSwitches){
-     InitSwitches();
+    InitSwitches();
+    OpenAndCofigureSerialPort();
 }
 
 string Prolific::GetBits(){
@@ -23,10 +25,14 @@ string Prolific::GetBits(){
 
 void Prolific::SetBits(const string& Bits){
     bits = Bits;
+    bitset <8> data(bits);
+    auto hex = data.to_ulong();
+    write(SerialPort, &hex, 1);
+    usleep(300000);
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
-    SerialPort = open("/dev/cu.usbserial-110", (O_RDWR | O_NOCTTY | O_NDELAY));
+    SerialPort = open("/dev/cu.usbserial-10", (O_RDWR | O_NOCTTY | O_NDELAY));
     
     struct termios options;
     tcgetattr(SerialPort, &options);
@@ -35,36 +41,16 @@ void Prolific::OpenAndCofigureSerialPort(){
     cfsetospeed(&options, B9600);
     
     if (tcsetattr(SerialPort, TCSANOW, &options) < 0) {
-        cout << "Err" << endl;
         close(SerialPort);
-    } else {
-        
+        throw BoardEx("Serial port error");
     }
 }
 
 void Prolific::InitSwitches(){
     for(int i = 0; i < number_of_switches;i++){
-        switches.push_back(new Relay(i));
+        switches.push_back(new Relay(i, this));
     }
-    /*
-    switches = new vector<Switch*>();
-    for(int i = 0;i < number_of_switches;i++){
-        Switch * relay = new Relay(this);
-        relay->SetId(i);
-        switches->push_back(relay);
-    }
-     */
 }
-
-//void Prolific::SetBits(string bits){
-    /*
-    this->bits = bits;
-    bitset <8> data(this->bits);
-    auto hex = data.to_ulong();
-    write(SerialPort, &hex, 1);
-    usleep(300000);
-     */
-//}
 
 Prolific::~Prolific(){
     close(SerialPort);

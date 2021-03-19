@@ -11,7 +11,7 @@
 #include <vector>
 #include "board.hpp"
 #include "switch.hpp"
-#include "relay.hpp"
+#include "board_ex.hpp"
 
 using namespace std;
 
