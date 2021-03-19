@@ -13,7 +13,6 @@ using namespace std;
 Board::Board(const int& NumberOfSwitches) {
     cout << "Board created" << endl;
     number_of_switches = NumberOfSwitches;
-    InitSwitches();
 }
 
 void Board::InitSwitches(){

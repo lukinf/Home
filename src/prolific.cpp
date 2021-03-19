@@ -14,9 +14,7 @@
 #include "enums.hpp"
 
 Prolific::Prolific(const int& NumberOfSwitches): Board(NumberOfSwitches){
-    for (int i = 0;i < number_of_switches;i++){
-        bits.append("1");
-    }
+     InitSwitches();
 }
 
 string Prolific::GetBits(){
@@ -44,7 +42,10 @@ void Prolific::OpenAndCofigureSerialPort(){
     }
 }
 
-void Prolific::InitRelays(){
+void Prolific::InitSwitches(){
+    for(int i = 0; i < number_of_switches;i++){
+        switches.push_back(new Relay(i));
+    }
     /*
     switches = new vector<Switch*>();
     for(int i = 0;i < number_of_switches;i++){

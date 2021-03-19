@@ -24,7 +24,7 @@ public:
     void OpenAndCofigureSerialPort();
     ~Prolific();
 private:
-    void InitRelays();
+    void InitSwitches();
     int SerialPort;
 };
 
