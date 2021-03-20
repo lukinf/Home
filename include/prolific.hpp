@@ -19,16 +19,16 @@ class Prolific : public Board
 {
 public:
     Prolific(const int & NumberOfSwitches, const string& SerialPortPath);
-    const char* bit1 = "1";
     const string& GetBits();
     void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
     ~Prolific();
 private:
-    void InitSwitches();
     int serial_port;
     string serial_port_path;
     string bits;
+    const char* bit1 = "1";
+    void InitSwitches();
 };
 
 #endif /* prolific_h */
