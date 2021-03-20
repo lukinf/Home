@@ -13,11 +13,11 @@ Switch::Switch(const int& Id){
     cout << "Created switch Id:" << id << endl;
 }
 
-int Switch::GetId(){
+const int& Switch::GetId(){
     return id;
 }
 
-switch_status Switch::GetStatus(){
+const switch_status& Switch::GetStatus(){
     return status;
 };
 

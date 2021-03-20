@@ -18,7 +18,7 @@ Prolific::Prolific(const int& NumberOfSwitches,const string& SerialPortPath): Bo
     InitSwitches();
 }
 
-string Prolific::GetBits(){
+const string& Prolific::GetBits(){
     return bits;
 }
 

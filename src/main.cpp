@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <syslog.h>
+#include <string>
 #include "board_factory.hpp"
 #include "board_ex.hpp"
 
@@ -16,7 +17,7 @@ int main(int argc, const char * argv[]) {
     try{
         auto board (BoardFactory::GetBoard(PROLIFIC, "/dev/cu.usbserial-10"));
         auto switches = board->GetSwitches();
-        cout << board->GetNumberOfSwitches() << endl;
+        syslog(LOG_INFO, "%d", board->GetNumberOfSwitches());
         for(Switch * relay : switches){
             relay->SetStatus(ON);
         };

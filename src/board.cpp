@@ -21,11 +21,11 @@ void Board::InitSwitches(){
     }
 }
 
-vector<Switch*> Board::GetSwitches(){
+const vector<Switch*>& Board::GetSwitches(){
     return switches;
 };
 
-int Board::GetNumberOfSwitches(){
+const int& Board::GetNumberOfSwitches(){
     return number_of_switches;
 }
 

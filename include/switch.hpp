@@ -18,8 +18,8 @@ class Switch
 {
 public:
     Switch(const int& Id);
-    int GetId();
-    switch_status GetStatus();
+    const int& GetId();
+    const switch_status& GetStatus();
     virtual void SetStatus(const switch_status& Status);
     ~Switch();
 protected:

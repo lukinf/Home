@@ -18,9 +18,9 @@ class Board
 {
 public:
     Board(const int& NumberOfSwitches);
-    int GetNumberOfSwitches();
+    const int& GetNumberOfSwitches();
     void SetNumberOfSwitches(const int& NumberOfSwitches);
-    vector<Switch*> GetSwitches();
+    const vector<Switch*>& GetSwitches();
     ~Board();
 protected:
     int number_of_switches;
