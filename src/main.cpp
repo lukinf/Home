@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <syslog.h>
 #include "board_factory.hpp"
 #include "board_ex.hpp"
 
@@ -21,7 +22,7 @@ int main(int argc, const char * argv[]) {
         };
     }
     catch (BoardEx ex){
-        cout << ex.what() << endl;
+        syslog(LOG_ERR, "%s",ex.what());
     }
     return 0;
 }

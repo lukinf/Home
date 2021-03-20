@@ -13,7 +13,6 @@
 		8006FB7F25F8140200766951 /* prolific.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB7D25F8140200766951 /* prolific.cpp */; };
 		8006FB8A25F8A89700766951 /* relay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB8825F8A89700766951 /* relay.cpp */; };
 		8006FB8F25F8BEA600766951 /* board_factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB8D25F8BEA600766951 /* board_factory.cpp */; };
-		8006FB9425F8F23500766951 /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB9225F8F23500766951 /* logger.cpp */; };
 		8006FB9925FA9E6F00766951 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB9725FA9E6F00766951 /* readme.md */; };
 		80D45E582600D5FB005BFE64 /* board_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80D45E562600D5FB005BFE64 /* board_ex.cpp */; };
 /* End PBXBuildFile section */
@@ -44,8 +43,6 @@
 		8006FB8925F8A89700766951 /* relay.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = relay.hpp; sourceTree = "<group>"; };
 		8006FB8D25F8BEA600766951 /* board_factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = board_factory.cpp; sourceTree = "<group>"; };
 		8006FB8E25F8BEA600766951 /* board_factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_factory.hpp; sourceTree = "<group>"; };
-		8006FB9225F8F23500766951 /* logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logger.cpp; sourceTree = "<group>"; };
-		8006FB9325F8F23500766951 /* logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = logger.hpp; sourceTree = "<group>"; };
 		8006FB9725FA9E6F00766951 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		80D45E562600D5FB005BFE64 /* board_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = board_ex.cpp; sourceTree = "<group>"; };
 		80D45E572600D5FB005BFE64 /* board_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_ex.hpp; sourceTree = "<group>"; };
@@ -89,7 +86,6 @@
 				8006FB7625F812D100766951 /* main.cpp */,
 				8006FB8825F8A89700766951 /* relay.cpp */,
 				8006FB8D25F8BEA600766951 /* board_factory.cpp */,
-				8006FB9225F8F23500766951 /* logger.cpp */,
 				80D45E562600D5FB005BFE64 /* board_ex.cpp */,
 			);
 			path = src;
@@ -104,7 +100,6 @@
 				8006FB8225F8142600766951 /* switch.hpp */,
 				8006FB8925F8A89700766951 /* relay.hpp */,
 				8006FB8E25F8BEA600766951 /* board_factory.hpp */,
-				8006FB9325F8F23500766951 /* logger.hpp */,
 				80D45E572600D5FB005BFE64 /* board_ex.hpp */,
 			);
 			path = include;
@@ -172,7 +167,6 @@
 				80D45E582600D5FB005BFE64 /* board_ex.cpp in Sources */,
 				8006FB7F25F8140200766951 /* prolific.cpp in Sources */,
 				8006FB7A25F813FB00766951 /* board.cpp in Sources */,
-				8006FB9425F8F23500766951 /* logger.cpp in Sources */,
 				8006FB7725F812D100766951 /* main.cpp in Sources */,
 				8006FB8A25F8A89700766951 /* relay.cpp in Sources */,
 			);

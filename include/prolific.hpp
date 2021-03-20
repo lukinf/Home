@@ -19,6 +19,7 @@ class Prolific : public Board
 {
 public:
     Prolific(const int & NumberOfSwitches, const string& SerialPortPath);
+    const char * bit1 = "1";
     string GetBits();
     void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
@@ -27,7 +28,7 @@ private:
     void InitSwitches();
     int serial_port;
     string serial_port_path;
-    string bits = "11111111";
+    string bits;
 };
 
 #endif /* prolific_h */
