@@ -17,7 +17,7 @@ class BoardFactory
 private:
     BoardFactory();
 public:
-    static unique_ptr<Board> GetBoard(board_type type);
+    static unique_ptr<Board> GetBoard(const board_type& type, const string& serial_port_path);
     ~BoardFactory();
 };
 

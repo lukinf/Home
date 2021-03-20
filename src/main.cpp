@@ -13,7 +13,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     try{
-        auto board (BoardFactory::GetBoard(PROLIFIC));
+        auto board (BoardFactory::GetBoard(PROLIFIC, "/dev/cu.usbserial-10"));
         auto switches = board->GetSwitches();
         cout << board->GetNumberOfSwitches() << endl;
         for(Switch * relay : switches){

@@ -18,14 +18,15 @@ using namespace std;
 class Prolific : public Board
 {
 public:
-    Prolific(const int & NumberOfSwitches);
+    Prolific(const int & NumberOfSwitches, const string& SerialPortPath);
     string GetBits();
     void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
     ~Prolific();
 private:
     void InitSwitches();
-    int SerialPort;
+    int serial_port;
+    string serial_port_path;
     string bits = "11111111";
 };
 

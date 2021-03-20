@@ -8,13 +8,14 @@
 #include "board_factory.hpp"
 
 BoardFactory::BoardFactory(){
-    
 }
 
-unique_ptr<Board> BoardFactory::GetBoard(board_type type){
+unique_ptr<Board> BoardFactory::GetBoard(const board_type& type, const string& serial_port){
     switch (type) {
+        case GENERIC:
+            throw (BoardEx("Not implmented"));
         case PROLIFIC:
-        return make_unique<Prolific>(8);
+        return make_unique<Prolific>(8, serial_port);
     };
     throw (BoardEx("Wrong type"));
 }
