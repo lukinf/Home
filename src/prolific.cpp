@@ -13,8 +13,6 @@
 #include <termios.h>
 #include <unistd.h>
 
-#define BIT1 '1';
-
 Prolific::Prolific(const int& NumberOfSwitches,const string& SerialPortPath): Board(NumberOfSwitches), serial_port_path(SerialPortPath){
     OpenAndCofigureSerialPort();
     InitSwitches();
