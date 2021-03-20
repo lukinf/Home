@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <syslog.h>
-#include <string>
 #include "board_factory.hpp"
 #include "board_ex.hpp"
 
