@@ -14,7 +14,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     try{
-        auto board (BoardFactory::GetBoard(PROLIFIC, "/dev/cu.usbserial-10"));
+        auto board (BoardFactory::GetBoard(PROLIFIC, "/dev/cu.usbserial-210"));
         auto switches = board->GetSwitches();
         syslog(LOG_INFO, "%d", board->GetNumberOfSwitches());
         for(Switch * relay : switches){

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-Board::Board(const int& NumberOfSwitches) {
+Board::Board(const int& NumberOfSwitches): number_of_switches(NumberOfSwitches) {
     cout << "Board created" << endl;
     number_of_switches = NumberOfSwitches;
 }

@@ -10,7 +10,7 @@
 BoardFactory::BoardFactory(){
 }
 
-unique_ptr<Board> BoardFactory::GetBoard(const board_type& type, const string& serial_port){
+unique_ptr<Board> BoardFactory::GetBoard(const BOARD_TYPE& type, const string& serial_port){
     switch (type) {
         case GENERIC:
             throw (BoardEx("Not implmented"));

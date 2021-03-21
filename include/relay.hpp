@@ -16,7 +16,7 @@ class Relay : public Switch
 {
 public:
     Relay(const int& Id, Prolific* Board);
-    void SetStatus(const switch_status& Status);
+    void SetStatus(const SWITCH_STATUS& Status);
     ~Relay();
 private:
     Prolific* board;

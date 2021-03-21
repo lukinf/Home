@@ -19,12 +19,12 @@ class Switch
 public:
     Switch(const int& Id);
     const int& GetId();
-    const switch_status& GetStatus();
-    virtual void SetStatus(const switch_status& Status);
+    const SWITCH_STATUS& GetStatus();
+    virtual void SetStatus(const SWITCH_STATUS& Status);
     ~Switch();
 protected:
     int id;
-    switch_status status;
+    SWITCH_STATUS status;
 };
 
 #endif /* relay_h */

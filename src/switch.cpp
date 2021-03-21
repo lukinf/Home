@@ -17,11 +17,11 @@ const int& Switch::GetId(){
     return id;
 }
 
-const switch_status& Switch::GetStatus(){
+const SWITCH_STATUS& Switch::GetStatus(){
     return status;
 };
 
-void Switch::SetStatus(const switch_status& Status){
+void Switch::SetStatus(const SWITCH_STATUS& Status){
     status = Status;
 };
 

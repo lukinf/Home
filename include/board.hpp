@@ -24,7 +24,6 @@ public:
     ~Board();
 protected:
     int number_of_switches;
-    string bits;
     vector<Switch*> switches;
     virtual void InitSwitches();
 };

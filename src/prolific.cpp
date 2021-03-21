@@ -25,8 +25,8 @@ const string& Prolific::GetBits(){
 void Prolific::SetBits(const string& Bits){
     bits = Bits;
     bitset <8> data(bits);
-    auto hex = data.to_ulong();
-    write(serial_port, &hex, 1);
+    auto command = data.to_ulong();
+    write(serial_port, &command, 1);
     usleep(300000);
 }
 
@@ -44,7 +44,7 @@ void Prolific::OpenAndCofigureSerialPort(){
 
 void Prolific::InitSwitches(){ 
     for(int i = 0; i < number_of_switches;i++){
-        bits.append(bit1);
+        bits.append(to_string(OFF));
         switches.push_back(new Relay(i, this));
     }
 }

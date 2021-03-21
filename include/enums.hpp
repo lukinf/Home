@@ -8,19 +8,14 @@
 #ifndef enums_h
 #define enums_h
 
-enum switch_status {
+enum SWITCH_STATUS {
     ON = 0,
     OFF = 1
 };
 
-enum board_type {
+enum BOARD_TYPE {
     PROLIFIC = 1,
     GENERIC = 2
-};
-
-enum logger_type {
-    CONSOLE = 1,
-    LOG_FILE = 2
 };
 
 #endif /* enums_h */
