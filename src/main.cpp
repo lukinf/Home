@@ -7,19 +7,20 @@
 
 #include <iostream>
 #include <syslog.h>
-#include "board_factory.hpp"
+#include "prolific.hpp"
 #include "board_ex.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     try{
-        auto board (BoardFactory::GetBoard(PROLIFIC, "/dev/cu.usbserial-210"));
-        auto switches = board->GetSwitches();
-        syslog(LOG_INFO, "%d", board->GetNumberOfSwitches());
-        for(Switch * relay : switches){
-            relay->SetStatus(ON);
+        Prolific board(8, "/dev/cu.usbserial-210");
+        auto switches = board.GetSwitches();
+        for(auto &relay : switches){
+            relay.SetStatus(OFF);
         };
+        board.SetSwitches(switches);
+        board.SendCommand();
     }
     catch (BoardEx ex){
         syslog(LOG_ERR, "%s",ex.what());

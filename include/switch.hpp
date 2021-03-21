@@ -20,7 +20,7 @@ public:
     Switch(const int& Id);
     const int& GetId();
     const SWITCH_STATUS& GetStatus();
-    virtual void SetStatus(const SWITCH_STATUS& Status);
+    void SetStatus(const SWITCH_STATUS& Status);
     ~Switch();
 protected:
     int id;

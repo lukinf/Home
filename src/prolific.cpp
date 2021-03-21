@@ -14,20 +14,8 @@
 #include <unistd.h>
 
 Prolific::Prolific(const int& NumberOfSwitches,const string& SerialPortPath): Board(NumberOfSwitches), serial_port_path(SerialPortPath){
-    OpenAndCofigureSerialPort();
     InitSwitches();
-}
-
-const string& Prolific::GetBits(){
-    return bits;
-}
-
-void Prolific::SetBits(const string& Bits){
-    bits = Bits;
-    bitset <8> data(bits);
-    auto command = data.to_ulong();
-    write(serial_port, &command, 1);
-    usleep(300000);
+    OpenAndCofigureSerialPort();
 }
 
 void Prolific::OpenAndCofigureSerialPort(){
@@ -44,9 +32,25 @@ void Prolific::OpenAndCofigureSerialPort(){
 
 void Prolific::InitSwitches(){ 
     for(int i = 0; i < number_of_switches;i++){
-        bits.append(to_string(OFF));
-        switches.push_back(new Relay(i, this));
+        switches.push_back(Relay(i));
     }
+}
+
+void Prolific::SendCommand(){
+    if(number_of_switches > 32){
+        throw BoardEx("Out of size");
+    } else {
+        bitset<32> bits;
+        sort(switches.begin(), switches.end(), [](Switch& lhs,Switch& rhs) {
+            return lhs.GetId() < rhs.GetId();
+        });
+        for (int i = 0; i < switches.size(); i++) {
+            bits.set(i, switches[i].GetStatus());
+        }
+        auto command = bits.to_ulong();
+        write(serial_port, &command, 1);
+        usleep(300000);
+    };
 }
 
 Prolific::~Prolific(){

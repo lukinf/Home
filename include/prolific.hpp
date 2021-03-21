@@ -22,6 +22,7 @@ public:
     const string& GetBits();
     void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
+    void SendCommand();
     ~Prolific();
 private:
     int serial_port;
