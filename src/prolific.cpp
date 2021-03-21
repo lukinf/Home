@@ -13,7 +13,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-Prolific::Prolific(const int& NumberOfSwitches,const string& SerialPortPath): Board(NumberOfSwitches), serial_port_path(SerialPortPath){
+Prolific::Prolific(const int& NumberOfSwitches,const string& SerialPortPath): number_of_switches(NumberOfSwitches), serial_port_path(SerialPortPath){
     InitSwitches();
     OpenAndCofigureSerialPort();
 }
@@ -49,7 +49,7 @@ void Prolific::SendCommand(){
         }
         auto command = bits.to_ulong();
         write(serial_port, &command, 1);
-        usleep(300000);
+        usleep(wait);
     };
 }
 

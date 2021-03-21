@@ -17,17 +17,12 @@ using namespace std;
 class Board
 {
 public:
-    Board(const int& NumberOfSwitches);
-    const int& GetNumberOfSwitches();
-    void SetNumberOfSwitches(const int& NumberOfSwitches);
+    Board();
     const vector<Switch>& GetSwitches();
     void SetSwitches(const vector<Switch>& Switches);
-    inline virtual void SendCommand(){};
     ~Board();
 protected:
-    int number_of_switches;
     vector<Switch> switches;
-    virtual void InitSwitches();
 };
 
 #endif /* board_h */

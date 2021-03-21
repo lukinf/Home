@@ -26,7 +26,8 @@ public:
     ~Prolific();
 private:
     int serial_port;
-    string bits;
+    int number_of_switches;
+    int wait = 300000;
     string serial_port_path;
     void InitSwitches();
 };

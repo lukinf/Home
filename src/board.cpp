@@ -10,14 +10,7 @@
 
 using namespace std;
 
-Board::Board(const int& NumberOfSwitches): number_of_switches(NumberOfSwitches) {
-    number_of_switches = NumberOfSwitches;
-}
-
-void Board::InitSwitches(){
-    for(int i = 0; i < number_of_switches;i++){
-        switches.push_back(Switch(i));
-    }
+Board::Board() {
 }
 
 const vector<Switch>& Board::GetSwitches(){
@@ -27,14 +20,6 @@ const vector<Switch>& Board::GetSwitches(){
 void Board::SetSwitches(const vector<Switch>& Switches){
     switches = Switches;
 };
-
-const int& Board::GetNumberOfSwitches(){
-    return number_of_switches;
-}
-
-void Board::SetNumberOfSwitches(const int& NumberOfSwitches){
-    number_of_switches = NumberOfSwitches;
-}
 
 Board::~Board(){
 }
