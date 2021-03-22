@@ -15,11 +15,10 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     try{
         Prolific board(8, "/dev/cu.usbserial-210");
-        auto switches = board.GetSwitches();
+        auto &switches = board.GetSwitches();
         for(auto &relay : switches){
-            relay.SetStatus(OFF);
+            relay.SetStatus(ON);
         };
-        board.SetSwitches(switches);
         board.SendCommand();
     }
     catch (BoardEx ex){

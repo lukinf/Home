@@ -18,7 +18,7 @@ class Board
 {
 public:
     Board();
-    const vector<Switch>& GetSwitches();
+    vector<Switch>& GetSwitches();
     void SetSwitches(const vector<Switch>& Switches);
     ~Board();
 protected:

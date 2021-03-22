@@ -18,8 +18,8 @@ class Switch
 {
 public:
     Switch(const int& Id);
-    const int& GetId();
-    const SWITCH_STATUS& GetStatus();
+    int& GetId();
+    SWITCH_STATUS& GetStatus();
     void SetStatus(const SWITCH_STATUS& Status);
     ~Switch();
 protected:

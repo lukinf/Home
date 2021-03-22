@@ -19,7 +19,7 @@ class Prolific : public Board
 {
 public:
     Prolific(const int& NumberOfSwitches, const string& SerialPortPath);
-    const string& GetBits();
+    string& GetBits();
     void SetBits(const string& Bits);
     void OpenAndCofigureSerialPort();
     void SendCommand();

@@ -13,7 +13,7 @@ using namespace std;
 Board::Board() {
 }
 
-const vector<Switch>& Board::GetSwitches(){
+vector<Switch>& Board::GetSwitches(){
     return switches;
 };
 

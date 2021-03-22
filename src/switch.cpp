@@ -12,11 +12,11 @@ Switch::Switch(const int& Id){
     status = OFF;
 }
 
-const int& Switch::GetId(){
+int& Switch::GetId(){
     return id;
 }
 
-const SWITCH_STATUS& Switch::GetStatus(){
+SWITCH_STATUS& Switch::GetStatus(){
     return status;
 };
 
