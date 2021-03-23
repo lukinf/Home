@@ -16,6 +16,7 @@
 class Socket {
 public:
     Socket (const int& Port);
+    ~Socket();
 protected:
     int port;
     struct sockaddr_in socket_server_addr_in ;
