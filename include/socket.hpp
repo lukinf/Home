@@ -8,12 +8,18 @@
 #ifndef socket_hpp
 #define socket_hpp
 
-#include <stdio.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include "socket_ex.hpp"
 
 class Socket {
-    Socket () {
-        
-    }
+public:
+    Socket (const int& Port);
+protected:
+    int port;
+    struct sockaddr_in socket_server_addr_in ;
+    struct sockaddr_in socket_client_addr_in;
 };
 
 #endif /* socket_hpp */

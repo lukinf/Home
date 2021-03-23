@@ -6,18 +6,15 @@
 //
 
 #include <iostream>
-#include <stdio.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
 #include "prolific.hpp"
+#include "socket.hpp"
 
 using namespace std;
 
 int main(int argc , char *argv[])
 {
     try{
+        Socket server(5000);
         Prolific board(8, "/dev/cu.usbserial-210");
         auto &switches = board.GetSwitches();
         for(auto &relay : switches){
@@ -25,8 +22,13 @@ int main(int argc , char *argv[])
         };
         board.SendCommand();
     }
-    catch (BoardEx ex){
+    catch (const BoardEx& ex){
         cerr << ex.what();
+        return 1;
+    }
+    catch (const SocketEx& ex){
+        cerr << ex.what();
+        return 1;
     }
     return 0;
 }
