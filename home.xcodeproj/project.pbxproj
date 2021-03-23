@@ -83,14 +83,11 @@
 		8006FB7525F811CF00766951 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				80A9E03E260A678B003040A9 /* socket_ex.cpp */,
-				80A9E03A260A660E003040A9 /* socket.cpp */,
-				8006FB7D25F8140200766951 /* prolific.cpp */,
-				8006FB7C25F8140200766951 /* switch.cpp */,
-				8006FB7925F813FB00766951 /* board.cpp */,
+				80A9E048260A7485003040A9 /* Board */,
+				80A9E046260A7475003040A9 /* lib */,
 				8006FB7625F812D100766951 /* main.cpp */,
-				8006FB8825F8A89700766951 /* relay.cpp */,
-				80D45E562600D5FB005BFE64 /* board_ex.cpp */,
+				80A9E049260A7492003040A9 /* Socket */,
+				80A9E047260A747C003040A9 /* Switch */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -98,16 +95,83 @@
 		8006FB8125F8140F00766951 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				8006FB8625F8142600766951 /* board.hpp */,
-				8006FB8325F8142600766951 /* enums.hpp */,
-				8006FB8525F8142600766951 /* prolific.hpp */,
-				8006FB8225F8142600766951 /* switch.hpp */,
-				8006FB8925F8A89700766951 /* relay.hpp */,
-				80D45E572600D5FB005BFE64 /* board_ex.hpp */,
-				80A9E03B260A660E003040A9 /* socket.hpp */,
-				80A9E03F260A678B003040A9 /* socket_ex.hpp */,
+				80A9E043260A7412003040A9 /* Board */,
+				80A9E045260A7468003040A9 /* lib */,
+				80A9E042260A7403003040A9 /* Socket */,
+				80A9E044260A741F003040A9 /* Switch */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		80A9E042260A7403003040A9 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				80A9E03F260A678B003040A9 /* socket_ex.hpp */,
+				80A9E03B260A660E003040A9 /* socket.hpp */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		80A9E043260A7412003040A9 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				80D45E572600D5FB005BFE64 /* board_ex.hpp */,
+				8006FB8525F8142600766951 /* prolific.hpp */,
+				8006FB8625F8142600766951 /* board.hpp */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		80A9E044260A741F003040A9 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				8006FB8925F8A89700766951 /* relay.hpp */,
+				8006FB8225F8142600766951 /* switch.hpp */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		80A9E045260A7468003040A9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				8006FB8325F8142600766951 /* enums.hpp */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		80A9E046260A7475003040A9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		80A9E047260A747C003040A9 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				8006FB8825F8A89700766951 /* relay.cpp */,
+				8006FB7C25F8140200766951 /* switch.cpp */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		80A9E048260A7485003040A9 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				80D45E562600D5FB005BFE64 /* board_ex.cpp */,
+				8006FB7D25F8140200766951 /* prolific.cpp */,
+				8006FB7925F813FB00766951 /* board.cpp */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		80A9E049260A7492003040A9 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				80A9E03A260A660E003040A9 /* socket.cpp */,
+				80A9E03E260A678B003040A9 /* socket_ex.cpp */,
+			);
+			path = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
