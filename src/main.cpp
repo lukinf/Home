@@ -6,23 +6,27 @@
 //
 
 #include <iostream>
-#include <syslog.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
 #include "prolific.hpp"
-#include "board_ex.hpp"
 
 using namespace std;
 
-int main(int argc, const char * argv[]) {
+int main(int argc , char *argv[])
+{
     try{
         Prolific board(8, "/dev/cu.usbserial-210");
         auto &switches = board.GetSwitches();
         for(auto &relay : switches){
-            relay.SetStatus(ON);
+            relay.SetStatus(OFF);
         };
         board.SendCommand();
     }
     catch (BoardEx ex){
-        syslog(LOG_ERR, "%s",ex.what());
+        cerr << ex.what();
     }
     return 0;
 }

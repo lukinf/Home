@@ -27,7 +27,7 @@ public:
 private:
     int serial_port;
     int number_of_switches;
-    int wait = 300000;
+    int wait = 0;
     string serial_port_path;
     void InitSwitches();
 };
