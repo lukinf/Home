@@ -14,6 +14,7 @@
 		8006FB8A25F8A89700766951 /* relay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB8825F8A89700766951 /* relay.cpp */; };
 		8006FB9925FA9E6F00766951 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 8006FB9725FA9E6F00766951 /* readme.md */; };
 		80A9E03C260A6612003040A9 /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80A9E03A260A660E003040A9 /* socket.cpp */; };
+		80A9E040260A6799003040A9 /* socket_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80A9E03E260A678B003040A9 /* socket_ex.cpp */; };
 		80D45E582600D5FB005BFE64 /* board_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80D45E562600D5FB005BFE64 /* board_ex.cpp */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		8006FB9725FA9E6F00766951 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		80A9E03A260A660E003040A9 /* socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
 		80A9E03B260A660E003040A9 /* socket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = socket.hpp; sourceTree = "<group>"; };
+		80A9E03E260A678B003040A9 /* socket_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = socket_ex.cpp; sourceTree = "<group>"; };
+		80A9E03F260A678B003040A9 /* socket_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = socket_ex.hpp; sourceTree = "<group>"; };
 		80D45E562600D5FB005BFE64 /* board_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = board_ex.cpp; sourceTree = "<group>"; };
 		80D45E572600D5FB005BFE64 /* board_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_ex.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,7 @@
 		8006FB7525F811CF00766951 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				80A9E03E260A678B003040A9 /* socket_ex.cpp */,
 				80A9E03A260A660E003040A9 /* socket.cpp */,
 				8006FB7D25F8140200766951 /* prolific.cpp */,
 				8006FB7C25F8140200766951 /* switch.cpp */,
@@ -101,6 +105,7 @@
 				8006FB8925F8A89700766951 /* relay.hpp */,
 				80D45E572600D5FB005BFE64 /* board_ex.hpp */,
 				80A9E03B260A660E003040A9 /* socket.hpp */,
+				80A9E03F260A678B003040A9 /* socket_ex.hpp */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				8006FB7F25F8140200766951 /* prolific.cpp in Sources */,
 				80A9E03C260A6612003040A9 /* socket.cpp in Sources */,
 				8006FB7A25F813FB00766951 /* board.cpp in Sources */,
+				80A9E040260A6799003040A9 /* socket_ex.cpp in Sources */,
 				8006FB7725F812D100766951 /* main.cpp in Sources */,
 				8006FB8A25F8A89700766951 /* relay.cpp in Sources */,
 			);
