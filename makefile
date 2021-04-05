@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -g
 INCLUDES = -I/include/Board/*.hpp -I/include/lib/*.hpp -I/include/Socket/*.hpp -I/include/Switch/*.hpp
-SRCS = /Board/*.cpp /Lib/*.cpp /Socket/*.cpp /Switch/*.cpp main.cpp
+SRCS = /src/Board/*.cpp /src/Lib/*.cpp /src/Socket/*.cpp /src/Switch/*.cpp /src/main.cpp
 OBJS = $(SRCS:.c=.o)
 MAIN = home
 .PHONY: depend clean
