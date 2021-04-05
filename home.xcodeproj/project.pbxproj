@@ -71,6 +71,7 @@
 			children = (
 				80F88136261BA8AE00414BFA /* makefile */,
 				8006FB9725FA9E6F00766951 /* readme.md */,
+				80F88131261BA44400414BFA /* etc */,
 				8006FB8125F8140F00766951 /* include */,
 				8006FB7525F811CF00766951 /* src */,
 				8006FB6A25F810AB00766951 /* Products */,
@@ -88,7 +89,6 @@
 		8006FB7525F811CF00766951 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				80F88131261BA44400414BFA /* etc */,
 				80A9E048260A7485003040A9 /* Board */,
 				80A9E046260A7475003040A9 /* Lib */,
 				8006FB7625F812D100766951 /* main.cpp */,
