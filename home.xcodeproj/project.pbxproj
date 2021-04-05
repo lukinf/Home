@@ -49,6 +49,7 @@
 		80A9E03F260A678B003040A9 /* socket_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = socket_ex.hpp; sourceTree = "<group>"; };
 		80D45E562600D5FB005BFE64 /* board_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = board_ex.cpp; sourceTree = "<group>"; };
 		80D45E572600D5FB005BFE64 /* board_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_ex.hpp; sourceTree = "<group>"; };
+		80F88134261BA49600414BFA /* home.service */ = {isa = PBXFileReference; lastKnownFileType = text; path = home.service; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		8006FB7525F811CF00766951 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				80F88131261BA44400414BFA /* etc */,
 				80A9E048260A7485003040A9 /* Board */,
 				80A9E046260A7475003040A9 /* lib */,
 				8006FB7625F812D100766951 /* main.cpp */,
@@ -172,6 +174,30 @@
 				80A9E03E260A678B003040A9 /* socket_ex.cpp */,
 			);
 			path = Socket;
+			sourceTree = "<group>";
+		};
+		80F88131261BA44400414BFA /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				80F88132261BA44C00414BFA /* systemd */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
+		80F88132261BA44C00414BFA /* systemd */ = {
+			isa = PBXGroup;
+			children = (
+				80F88133261BA45600414BFA /* system */,
+			);
+			path = systemd;
+			sourceTree = "<group>";
+		};
+		80F88133261BA45600414BFA /* system */ = {
+			isa = PBXGroup;
+			children = (
+				80F88134261BA49600414BFA /* home.service */,
+			);
+			path = system;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

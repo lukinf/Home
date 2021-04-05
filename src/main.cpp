@@ -23,11 +23,11 @@ int main(int argc , char *argv[])
         board.SendCommand();
     }
     catch (const BoardEx& ex){
-        cerr << ex.what();
+        cerr << ex.what() << endl;
         return 1;
     }
     catch (const SocketEx& ex){
-        cerr << ex.what();
+        cerr << ex.what() << endl;
         return 1;
     }
     return 0;
