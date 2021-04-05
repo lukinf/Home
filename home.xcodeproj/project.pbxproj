@@ -52,6 +52,7 @@
 		80D45E572600D5FB005BFE64 /* board_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board_ex.hpp; sourceTree = "<group>"; };
 		80F88134261BA49600414BFA /* home.service */ = {isa = PBXFileReference; lastKnownFileType = text; path = home.service; sourceTree = "<group>"; };
 		80F88136261BA8AE00414BFA /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		80F8813B261BAECD00414BFA /* home */ = {isa = PBXFileReference; lastKnownFileType = text; path = home; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +183,7 @@
 		80F88131261BA44400414BFA /* etc */ = {
 			isa = PBXGroup;
 			children = (
+				80F88139261BAE9000414BFA /* home */,
 				80F88132261BA44C00414BFA /* systemd */,
 			);
 			path = etc;
@@ -201,6 +203,14 @@
 				80F88134261BA49600414BFA /* home.service */,
 			);
 			path = system;
+			sourceTree = "<group>";
+		};
+		80F88139261BAE9000414BFA /* home */ = {
+			isa = PBXGroup;
+			children = (
+				80F8813B261BAECD00414BFA /* home */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
